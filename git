@@ -17,6 +17,8 @@ git log                 # Все изменения
 git diff <commit1> <commit2> # Разница. git log посмотреть commit(хэши)
 git diff HEAD~1 HEAD~2
 git diff HEAD~1            # Последние изменения, HEAD~2 предпоследний
+git diff master..develep   # Сравнить разные ветки
+
 
 git checkout -- test.html  # Вернуть предудущий версии, можно сделать до git add
 git reset HEAD test.html   # Можно вернуть из индекса, т.е. можно еще раз git add
@@ -27,3 +29,26 @@ git revert 4501d17c         # удаляется конкретный комми
 git reset --mixed           # Откат на этот хэш, а все позже этого очищает из индекса
 git reset --hard 4501d17c   # Откатывает до этого хэша, а все позже этого очищает/удаляется
 git reset --soft            # 
+
+git clone http:\\...          # Клонировать из облака
+git push                      # Отправить на сайт
+git push -u origin master     # Отправить ветку 
+git push --delete origin dev  # Удалить ветку dev из облако
+git pull                      # Получить только измененные коммиты, если после push были изменения в облаке, слияние допустим master и origin/master
+git fetch                     # Скачает из облака в локальный ПК, но в отличи pull не сливает одинаковые ветки т.е. можно сравнить между собой две одинаковые ветки
+                              #потом можно сравнить git diff master..origin/master
+
+git checkout -b dev         # Создает ветку dev
+git checkout master         # Переключает на master
+
+git remote -V               # Показывает репозитории с какими работал, удаленные
+
+git branch -m dev develop   # Переименовать dev на develop
+git branch -l               # Показывает какие ветви есть
+git branch -d develop       # Удалить ветку develop
+
+
+
+
+
+
