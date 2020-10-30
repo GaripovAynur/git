@@ -18,3 +18,12 @@ git diff <commit1> <commit2> # Разница. git log посмотреть comm
 git diff HEAD~1 HEAD~2
 git diff HEAD~1            # Последние изменения, HEAD~2 предпоследний
 
+git checkout -- test.html  # Вернуть предудущий версии, можно сделать до git add
+git reset HEAD test.html   # Можно вернуть из индекса, т.е. можно еще раз git add
+
+git commit --amend          # Изменить последний commit, редактировать название и т.д.
+
+git revert 4501d17c         # удаляется конкретный коммит
+git reset --mixed           # Откат на этот хэш, а все позже этого очищает из индекса
+git reset --hard 4501d17c   # Откатывает до этого хэша, а все позже этого очищает/удаляется
+git reset --soft            # 
