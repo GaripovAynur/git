@@ -47,6 +47,13 @@ git branch -m dev develop   # Переименовать dev на develop
 git branch -l               # Показывает какие ветви есть
 git branch -d develop       # Удалить ветку develop
 
+git merge <branch>          # Сливает в текущую ветку другую ветку <branch>, в случае конфликта предлагает чей вариант принять.
+git merge --abort           # Отменить последний автоматический merge
+
+git blame src/poetry.txt    # Показывает кто и когда менял строки в коде
+
+
+
 
 
 
